@@ -7,7 +7,14 @@ class App extends Component {
         return (
             <div>
                 <Navbar />
-        
+                <div className="container">
+
+                    <div className="page-title">
+                        <h1>Ders Programı</h1>
+
+                    </div>
+
+                </div>
             </div>
         );
     }

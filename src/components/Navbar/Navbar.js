@@ -21,8 +21,7 @@ class Navbar extends Component {
 
     render() {
         return (
-            
-            <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+            <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse">
                 <button onClick={this.handleToggle} className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
                 </button>
