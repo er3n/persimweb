@@ -1,3 +1,4 @@
+//noinspection JSUnresolvedVariable
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
@@ -23,7 +24,7 @@ class Navbar extends Component {
             
             <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
                 <button onClick={this.handleToggle} className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon" />
                 </button>
                 <a className="navbar-brand" href="#" >{title}</a>
 
