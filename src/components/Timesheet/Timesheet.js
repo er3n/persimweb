@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
+
 
 
 
@@ -7,7 +7,7 @@ class Timesheet extends Component {
 
     render() {
         return (
-            <table className="table table-bordered table">
+            <table className="table table-bordered table-inverse">
                 <thead>
                 <tr>
                     <th>Sıra</th>
