@@ -1,34 +1,50 @@
 //noinspection JSUnresolvedVariable
-import React, { Component } from 'react';
-import classNames from 'classnames';
+import React, {Component} from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
 
 
 const title = "Persim";
 
-class Navbar extends Component {
+class AppNavbar extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
 
     render() {
         return (
-            <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-                <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <a className="navbar-brand" href="#">{title}</a>
-
-                <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#">Ders Programı <span className="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Çıkış</button>
-                    </form>
-                </div>
-            </nav>
+            <div>
+                <Navbar color="inverse" inverse toggleable >
+                    <NavbarToggler right onClick={this.toggle}/>
+                    <NavbarBrand href="/">{title}</NavbarBrand>
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className="mr-auto" navbar>
+                            <NavItem>
+                                <NavLink href="https://github.com/reactstrap/reactstrap">Ders Programı</NavLink>
+                            </NavItem>
+                        </Nav>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink href="https://github.com/reactstrap/reactstrap">Çıkış</NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                </Navbar>
+            </div>
         );
     }
 }
 
-export default Navbar;
+export default AppNavbar;
